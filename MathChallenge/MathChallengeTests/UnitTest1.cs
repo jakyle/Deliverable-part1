@@ -13,11 +13,7 @@ namespace MathChallengeTests
         {
             NumberChallenge challenge = new NumberChallenge();
 
-            string test1 = "4568462125";
-            string test2 = "5568789921";
-
-            int[] intRes1 = challenge.ConvertToNumArry(test1);
-            int[] intRes2 = challenge.ConvertToNumArry(test2);
+            int[] intRes1 = challenge.ConvertToNumArry("4568462125");
 
             CollectionAssert.AreEqual(intRes1, new int[] { 4, 5, 6, 8, 4, 6, 2, 1, 2, 5 });
         }
@@ -27,9 +23,7 @@ namespace MathChallengeTests
         {
             NumberChallenge challenge = new NumberChallenge();
 
-            int[] num1 = new int[] { 1, 2, 3, 4, 5 };
-            int[] num2 = new int[] { 5, 4, 3, 2, 1 };
-            int[] newIntArry = challenge.SumNumsArray(num1, num2);
+            int[] newIntArry = challenge.SumNumsArray(new int[] { 1, 2, 3, 4, 5 }, new int[] { 5, 4, 3, 2, 1 });
 
             CollectionAssert.AreEqual(newIntArry, new int[] { 6, 6, 6, 6, 6 });
         }
